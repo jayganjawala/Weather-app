@@ -1,0 +1,94 @@
+/* Body Styling */
+body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #2C3E50; /* Darker, cooler background */
+  font-family: 'Arial', sans-serif;
+  color: white; /* Light text color for readability */
+}
+
+/* Show Weather Container */
+.show-weather {
+  background-color: #34495E; /* Dark grey with a touch of blue */
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  width: 350px; /* Fixed width to prevent stretching */
+  text-align: center;
+  animation: fadeIn 0.5s ease-out; /* Smooth fade-in effect */
+}
+
+/* Segment Styling */
+.show-weather .ui.segment {
+  background-color: #1F2A3D; /* Dark blue background for segments */
+  color: #ECF0F1; /* Soft white text color */
+  border: none;
+  font-size: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.show-weather .ui.segment:hover {
+  background-color: #3B4D68; /* Lighter hover color */
+  transform: translateY(-5px); /* Slightly raise the segment on hover */
+}
+
+/* First Segment (Weather Icon + Temp) */
+.show-weather .ui.segment:first-of-type i {
+  font-size: 4rem;
+  margin-right: 1rem;
+  color: #FFEB3B; /* Bright yellow for sun/weather icon */
+}
+
+/* Icons Style */
+i {
+  margin-right: 0.8em;
+}
+
+/* Segment for Humidity */
+.show-weather .ui.segment i.fa-humidity {
+  color: #7CB9E8; /* Light blue for humidity icon */
+}
+
+/* Wind Speed Segment */
+.show-weather .ui.segment i.fa-tachometer-fast {
+  color: #F39C12; /* Gold color for wind speed */
+}
+
+/* District Segment */
+.show-weather .ui.segment i.fa-road {
+  color: #E74C3C; /* Red color for district */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .show-weather {
+    width: 90%; /* Make it responsive on smaller screens */
+    padding: 1.5rem;
+  }
+
+  .show-weather .ui.segment {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .show-weather .ui.segment:first-of-type i {
+    font-size: 3.5rem; /* Smaller icon for mobile */
+  }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
